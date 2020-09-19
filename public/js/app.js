@@ -20,7 +20,8 @@ weatherForm.addEventListener("submit", (e) => {
             data.desc +
             ". It feels like " +
             data.feelsLikeTemp +
-            "c";
+            "c with a humidity of " +
+            data.humidity;
         }
       });
     });

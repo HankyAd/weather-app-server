@@ -53,12 +53,13 @@ app.get("/weather", (req, res) => {
           if (err) {
             return res.send({ err });
           } else {
-            const { desc, currentTemp, feelsLikeTemp } = forecast;
+            const { desc, currentTemp, feelsLikeTemp, humidity } = forecast;
             return res.send({
               currentTemp,
               desc,
               feelsLikeTemp,
               location: geocode.placeName,
+              humidity,
             });
           }
         });
